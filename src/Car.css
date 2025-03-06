@@ -26,7 +26,7 @@
     z-index: 10;
   }
   
-  /* Logo in navbar */
+  Logo in navbar
   .car-navbar .navbar-logo a {
     color: white;
     font-size: 24px;
@@ -60,4 +60,6 @@
     color: rgb(255, 101, 101);
     padding: 100px;
   }
+  
+
   
