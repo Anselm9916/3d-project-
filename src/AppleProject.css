@@ -23,7 +23,6 @@
     top: 40px;
     left: 60px;
     color: rgb(74,73,80);
-    font-size: 24px;
     font-weight: bold;
     padding: 15px 20px;
 }
@@ -42,7 +41,7 @@
 /* Back to Home Button */
 .apple-project-wrapper .cta-button { 
     position: absolute;
-    left: 75px;
+    left: 79px;
     bottom: 100px;
     background-color: transparent;
     color: rgb(74,73,80);
