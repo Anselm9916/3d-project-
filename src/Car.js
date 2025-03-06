@@ -1,32 +1,36 @@
-import React from 'react';
-import './Car.css'; // Important: keep the same filename
+import React, { useState } from "react";
+import "./Car.css";
 
 const Car = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePanel = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="car-page">
-      {/* Transparent Navbar (scoped to .car-page) */}
-      {/* <nav className="car-navbar">
-        <div className="navbar-logo">
-          <a href="#">Logo</a>
-        </div>
-        <ul className="navbar-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav> */}
+      {/* Navbar */}
+      <nav className="car-navbar">
+        <h1>Car Project</h1>
+      </nav>
 
-      {/* Content Section */}
+      {/* Main Content */}
       <div className="car-content">
-        <h1>Welcome to My Page</h1>
-        <p>Scroll down to see the fixed background image!</p>
-        <p>Keep scrolling... <strong>the background will stay fixed!</strong></p>
+        <h2>Welcome to My Car Project</h2>
+        <p>Click the arrow to reveal more details.</p>
+      </div>
 
-        {/* Spacer to enable scrolling */}
-        <div style={{ height: '1500px' }}>
-          <p>More content to scroll...</p>
-        </div>
+      {/* Slide-out Button */}
+      <button className="slide-button" onClick={togglePanel}>
+        {isOpen ? "×" : "→"}
+      </button>
+
+      {/* Slide-out Panel */}
+      <div className={`slide-panel ${isOpen ? "open" : ""}`}>
+        <h2>More Information</h2>
+        <p>This is a hidden panel that slides in when you click the button.</p>
+        <p>You can put anything here like project details, images, etc.</p>
       </div>
     </div>
   );
