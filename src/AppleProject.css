@@ -1,0 +1,94 @@
+/* Main wrapper */
+.apple-project-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(159,159,169);
+    transition: background 0.5s ease-in-out;
+}
+
+/* Full-screen 3D Model */
+.spline-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Apple Title */
+.apple-title {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    color: rgb(74,73,80);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 20px;
+}
+
+/* Apple Text */
+.apple-text {
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    color: rgb(74,73,80);
+    font-size: 19px;
+    padding: 15px 20px;
+    max-width: 300px;
+}
+
+/* Back to Home Button */
+.apple-project-wrapper .cta-button { 
+    position: absolute;
+    left: 70px;
+    bottom: 100px;
+    background-color: transparent;
+    color: rgb(74,73,80);
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.apple-project-wrapper .cta-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Color Selector */
+.apple-project-wrapper .color-selector {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* Round Color Buttons */
+.apple-project-wrapper .color-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Color Options */
+.apple-project-wrapper .color-button.white { background-color: #d7d4cd; }
+.apple-project-wrapper .color-button.black { background-color: #1c1c1e; }
+.apple-project-wrapper .color-button.gold { background-color: #a2836e; }
+.apple-project-wrapper .color-button.blue { background-color: #a5a5a5; }
+
+/* Highlight Selected Color */
+.apple-project-wrapper .color-button.selected {
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}

@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+/* Main container */
+html, body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.2); /* White with transparency */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px); /* Blur effect */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar h1 {
+    color: white;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ddd;
+}
+
+/* 3D Model Container */
+.spline-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text on the Right */
+.text-container {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 300px;
+    text-align: right;
+}
+
+.text-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-size: 1.2rem;
+}
+
+/* Left-side Text */
+.left-text-container {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 300px;
+    text-align: left;
+}
+
+.left-text-container h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.left-text-container p {
+    font-size: 1.1rem;
+}
+
+/* Button styling */
+.cta-button {
+  background-color: transparent;
+  border: 2px solid white;
   color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Button hover effect */
+.cta-button:hover {
+  background-color: white;
+  color: #333;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
