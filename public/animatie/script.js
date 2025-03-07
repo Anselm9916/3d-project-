@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const logo = document.querySelector('.logo');
     const headline = document.querySelector('.headline');
     const backButton = document.querySelector('.back-button');
+    const slideButton = document.querySelector('.slide-button');
+    const slidePanel = document.querySelector('.slide-panel');
+    const closeButton = document.querySelector('.close-button');
 
     const tl = new TimelineMax();
 
@@ -17,5 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Go back to the home page when clicked
     backButton.addEventListener("click", () => {
         window.location.href = "/";
+    });
+
+    // GSAP Animation for Slide-In Panel
+    const panelTl = new TimelineMax({ paused: true });
+    panelTl.to(slidePanel, 0., { right: "0%", ease: Power2.easeOut });
+
+    // Open panel when clicking slide button
+    slideButton.addEventListener("click", () => {
+        panelTl.play();
+    });
+
+    // Close panel when clicking close button
+    closeButton.addEventListener("click", () => {
+        panelTl.reverse(); // Slide it back
     });
 });
