@@ -93,9 +93,11 @@ function Dropdown() {
           <Link to="/apple-project">
             <button className="cta-button dropdown-item">My Apple Project</button>
           </Link>
-          <Link to="/car">
-            <button className="cta-button dropdown-item">My Car Project</button>
-          </Link>
+         
+          <a href="/animatie/index.html" target="_blank" rel="noopener noreferrer">
+  <button className="cta-button">Car Project</button>
+</a>
+          
         </div>
       )}
     </div>
