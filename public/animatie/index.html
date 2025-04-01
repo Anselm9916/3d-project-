@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <nav>
+      <h3 class="logo">Animatie Project</h3>
+    </nav>
+    <section>
+      <div class="hero">
+        <img src="iris.jpg" alt="" />
+        <h1 class="headline">dream big</h1>
+      </div>
+      <button class="slide-button">More Info</button>
+    </section>
+  </header>
 
-    <header>
-        <nav>
-            <h3 class="logo">Animatie Project</h3>
-        </nav>
-        <section>
-            <div class="hero">
-                <img src="iris.jpg" alt="">
-                <h1 class="headline">dream big</h1>
-            </div>
+  <div class="slider"></div>
 
-        </section>
-    </header>
+  <button class="back-button">Back to Home</button>
 
-    <div class="slider"></div>
-
-    <button class="back-button">Back to Home</button>
-
-
-    <button class="slide-button">More Info</button>
-
-<!-- Sliding Panel -->
-<div class="slide-panel">
+  <div class="info-overlay">
     <h2>Car Project Details</h2>
     <p>This is an experimental animation project where I explore transitions and GSAP animations.</p>
     <button class="close-button">Close</button>
-</div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
-    
-     <script src="script.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
 
-
+  <!-- Main Script -->
+  <script src="script.js"></script>
 </body>
 </html>
